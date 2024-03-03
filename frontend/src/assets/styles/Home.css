@@ -1,0 +1,53 @@
+/* Styles for larger devices */
+.home {
+    /* Set width and height to fill viewport */
+    width: 100%;
+    height: 90vh;
+    /* Center content vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: left; /* Should be 'flex-start' to align text to the left */
+    flex-direction: column; /* Stack items vertically */
+    /* Background image properties */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Font styles */
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  
+  /* Styles for header container */
+  .headerContainer {
+    /* Margin and color settings */
+    margin-left: 50px; /* Duplicate property */
+    color: #fd9946; /* Text color */
+    margin-left: 10%; /* Adjusted margin for larger devices */
+    /* Alignment and text shadow */
+    align-items: center; /* Should be 'flex-start' to align text to the left */
+    font-size: 400%; /* Font size */
+    font-weight: 50; /* Font weight (should be numeric) */
+    text-shadow: 8px 8px 12px rgb(136, 71, 10); /* Text shadow */
+  }
+  
+  /* Media query for smaller devices */
+  @media only screen and (max-width: 650px) {
+    .home {
+      /* Center content vertically and horizontally */
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .headerContainer {
+      /* Adjust styles for smaller devices */
+      margin-left: 0px; /* Remove left margin */
+      border-radius: 10px; /* Add border radius */
+      padding: 10px; /* Add padding */
+      width: 80%; /* Reduce width */
+      display: flex; /* Use flexbox */
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center text */
+      color: #fd9946; /* Text color */
+      font-size: 200%; /* Adjust font size */
+    }
+  }
+  

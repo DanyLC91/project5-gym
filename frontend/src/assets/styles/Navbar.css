@@ -1,0 +1,117 @@
+/* Styles for the navbar */
+.navbar {
+    width: 100%; /* Full width */
+    height: 100px; /* Fixed height */
+    background-color: rgba(18, 22, 25, 0.7); /* Semi-transparent background color */
+    display: flex; /* Use flexbox */
+    flex-direction: row; /* Arrange items horizontally */
+    position: fixed; /* Fixed position */
+    top: 0; /* Stick to the top */
+    left: 0; /* Stick to the left */
+    z-index: 1000; /* Set a high z-index to ensure it appears on top of other content */
+  }
+  
+  /* Styles for the left side of the navbar */
+  .navbar .leftSide {
+    flex: 50%; /* Take up half of the width */
+    height: 100%; /* Full height */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    padding-left: 150px; /* Left padding */
+    padding-top: 30px; /* Top padding */
+  }
+  
+  /* Styles for the logo in the navbar */
+  .navbar .leftSide img {
+    width: 180px; /* Fixed width */
+  }
+  
+  /* Styles for the right side of the navbar */
+  .navbar .rightSide {
+    flex: 50%; /* Take up half of the width */
+    height: 100%; /* Full height */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+  }
+  
+  /* Styles for links in the navbar */
+  .navbar a {
+    color: white; /* White color */
+    text-decoration: none; /* Remove underline */
+    margin: 20px 30px; /* Margin around links */
+  }
+  
+  /* Styles for buttons in the navbar */
+  .navbar .rightSide button {
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    color: white; /* White color */
+    cursor: pointer; /* Pointer cursor */
+  }
+  
+  /* Styles for icons in the navbar */
+  .navbar .rightSide svg {
+    font-size: 40px; /* Larger font size for icons */
+  }
+  
+  /* Styles for the navbar when open */
+  .navbar #open {
+    padding-left: 0px; /* No left padding */
+  }
+  
+  .navbar #open img {
+    display: none; /* Hide the menu icon when open */
+  }
+  
+  .navbar #close img {
+    display: inherit; /* Show the close icon when open */
+  }
+  
+  .navbar #open .hiddenLinks {
+    display: inherit; /* Show the hidden links when open */
+    margin-left: 30px; /* Add margin to the left */
+  }
+  
+  .navbar #close .hiddenLinks {
+    display: none; /* Hide the hidden links when closed */
+  }
+  
+  /* Media query for medium-sized screens */
+  @media only screen and (max-width: 1200px) {
+    .navbar .rightSide a {
+      width: 70px; /* Adjust width of links */
+    }
+  
+    .navbar .leftSide {
+      padding-left: 50px; /* Adjust left padding */
+    }
+  }
+  
+  /* Media query for small screens */
+  @media only screen and (max-width: 800px) {
+    .navbar .rightSide a {
+      display: none; /* Hide links */
+    }
+  
+    .navbar .rightSide {
+      justify-content: flex-end; /* Align items to the right */
+      padding-right: 50px; /* Adjust right padding */
+    }
+  
+    .navbar .rightSide button {
+      display: inherit; /* Show the menu button */
+    }
+  }
+  
+  /* Media query for large screens */
+  @media only screen and (min-width: 800px) {
+    .navbar .rightSide button {
+      display: none; /* Hide the menu button */
+    }
+  
+    .hiddenLinks {
+      display: none; /* Hide the hidden links */
+    }
+  }
+  

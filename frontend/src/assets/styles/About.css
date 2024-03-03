@@ -1,0 +1,72 @@
+/* Styles for larger devices */
+.about {
+    display: flex;
+    flex-direction: row-reverse; /* Change to row-reverse */
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .aboutRight {
+    width: 50%;
+    max-width: 50vw;
+    padding: 5%; /* Change to right padding */
+    text-align: justify; /* Text alignment to left */
+  }
+  
+  .aboutRight h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem; /* Adjust font size as needed */
+    margin-bottom: 20px;
+    margin-top: -10%; /* Adjust margin top as needed */
+    color: white;
+  }
+  
+  .aboutRight p {
+    font-size: 150%; /* Adjust font size as needed */
+    color: white;
+  }
+  
+  .aboutLeft {
+    width: 50%;
+    max-width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .aboutLeft img {
+    width: 100%; /* Make sure the image doesn't overflow */
+    height: auto;
+  }
+  
+  /* Media query for smaller devices */
+  @media screen and (max-width: 1050px) {
+    .about {
+      flex-direction: column; /* Change to column for smaller devices */
+    
+    }
+  
+    .aboutRight {
+      width: 100%; /* Full width for smaller devices */
+      padding-right: 0; /* No right padding for smaller devices */
+      text-align: justify; /* Text alignment to center for smaller devices */
+      margin-top: 7em; /* Reset margin top for smaller devices */
+    }
+  
+    .aboutRight h1 {
+      font-size: 2rem; /* Adjust font size for smaller devices */
+      margin-top: -20px; /* Adjust margin top for smaller devices */
+      text-align: center;
+    }
+  
+    .aboutRight p {
+      font-size: 100%; /* Adjust font size for smaller devices */
+    }
+  
+    .aboutLeft {
+      width: 100%; /* Full width for smaller devices */
+      margin-top: -10%; /* Adjust margin top for smaller devices */
+    }
+  }
+  

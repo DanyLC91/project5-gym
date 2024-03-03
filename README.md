@@ -1,110 +1,69 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Code Institute Project5 - FX Fitness Gym
 
-Welcome DanyLC91,
+## About
+The primary purpose of the Fitness Gym Website is to provide potential gym members with information about the gym's offerings and to facilitate the purchase of memberships. By offering an intuitive and user-friendly interface, the website aims to attract new customers and streamline the membership acquisition process.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Features
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+- **Membership Information**: Detailed information about various membership plans, benefits, and options.
+- **Membership Purchase**: Allows customers to purchase memberships directly through the website.
+- **Responsive Design**: Ensures optimal viewing and interaction across various devices.
 
-## Gitpod Reminders
+## Technologies Used
+- **React.js**: Frontend development for dynamic and interactive user interfaces.
+- **Payment Processing Integration**: Securely handles online payments for membership purchases.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+## Step-by-Step Project Setup Guide
 
-A blue button should appear to click: _Make Public_,
+1. **Install React**: Start by installing React in your project directory. React will be hosted in a folder named "Frontend."
 
-Another blue button should appear to click: _Open Browser_.
+2. **Project Structure**: Within the "src" directory, you'll find the source code of the project.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+3. **index.js**: The "index.js" file initializes the React application, rendering the main "App" component and reporting web vitals for performance monitoring.
 
-A blue button should appear to click: _Make Public_,
+4. **App.js**: The core component of the React application, "App," sets up routing for different pages and renders the Navbar, Routes to the pages, and Footer components.
 
-Another blue button should appear to click: _Open Browser_.
+### Pages and Components
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+5. **Home.js**: The landing page with a minimalistic and modern view. It renders a banner image with a header, displaying a navbar, an image as a body, and a footer. Styling is done using CSS imported into the component.
 
-To log into the Heroku toolbelt CLI:
+6. **Navbar.js**: Defines a navigation bar component using React and React Router. Manages navigation links' visibility using state and renders the navigation bar with logo, links, and a menu icon. It utilizes the useState hook for state management and react-router-dom for navigation.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+7. **Footer.js**: The contact section of the page is in the footer. It renders contact information and social media links using Material-UI icons for Instagram, Facebook, and more.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+8. **AboutUs.js**: Displays information about a fitness center, including a heading, paragraphs of text, and an image. Provides users with insights into the gym's mission and values.
 
-------
+9. **TheGym.js**: Renders content related to the gym's facilities, classes, and team members. It showcases the gym's offerings and provides a glimpse into the gym's atmosphere.
 
-## Release History
+10. **Membership.js**: Displays information about membership plans and allows users to switch between monthly and three-month plans. Manages state using the useState hook and renders the Plan component for each membership option, passing props such as title, price, access, classes, extra features, discount, and link based on the selected plan type.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+11. **Plans.js**: Defines a React functional component called Plan that displays the details of a membership plan. It takes in several props such as title, price, classes, access, discount, extra, and link. The component renders a container with the plan details, including the title, price, access details, classes included, extra benefits, and discount information. It also includes a button to purchase the plan, which redirects the user to the specified link.
 
-**September 20 2023:** Update Python version to 3.9.17.
+## Additional Features
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+12. **Stripe Integration**: Stripe was added to the site to enable users to purchase membership plans securely. Upon clicking "GET NOW," users are redirected to a new tab to complete the purchase by providing necessary details such as email, card information, and address. Follow these steps to integrate Stripe:
+    - Sign up for a Stripe account
+    - Create a product for each membership plan in test mode
+    - Enter product details and set pricing
+    - Obtain API keys
+    - Add links to the Membership.js component for seamless integration.
+   
+## Assets
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+This section contains two folders:
+- **Images**: Stores the pictures used in the site.
+- **Styles**: Hosts all the .css files for styling the components.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+The project aims to provide users with a seamless experience while exploring membership options and purchasing plans. With a user-friendly interface and integrated payment system, users can easily navigate through the site, learn about the gym's offerings, and select the membership plan that best suits their needs. Additionally, the project emphasizes code organization and component modularity, making it easy to maintain and scale in the future.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Credits
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- Stripe
+- Pexels.com
+- Canva for the Gym logo
+- YouTube channel PedroTech and others.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+#### Content
+- All text content is where created with ChatGPT.
+- Some images were created by Midjourney AI.

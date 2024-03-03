@@ -1,0 +1,87 @@
+/* Styles for individual cards */
+.Cards {
+    padding: 2em; /* Padding around the card content */
+    border-radius: 1em; /* Rounded corners */
+    text-align: center; /* Center-align text */
+    color: var(--neutral-dark-grayish-blue); /* Text color */
+    background-color: var(--neutral-white); /* Background color */
+    width: min(100%, 30rem); /* Set maximum width */
+  }
+  
+  /* Special styles for the second card */
+  .Cards:nth-child(2) {
+    background-image: linear-gradient(to right, var(--primary-linear-gradient)); /* Gradient background */
+    color: var(--neutral-white); /* Text color */
+    align-self: stretch; /* Stretch card vertically */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: stretch; /* Stretch items horizontally */
+  }
+  
+  /* Styles for card header price */
+  .Cards header > .card-price {
+    margin-block: 1rem; /* Margin above and below */
+    font-size: 3.5em; /* Larger font size */
+  }
+  
+  /* Styles for card features */
+  .Cards .card-features > * {
+    padding-block: 1em; /* Padding above and below */
+    border-bottom: 1px solid var(--neutral-light-grayish-blue); /* Bottom border */
+  }
+  
+  /* First child of card features has top border */
+  .Cards .card-features :first-child {
+    border-top: 1px solid var(--neutral-light-grayish-blue); /* Top border */
+  }
+  
+  /* Last child of card features has bottom margin */
+  .Cards .card-features :last-child {
+    margin-bottom: 2em; /* Bottom margin */
+  }
+  
+  /* Styles for card button */
+  .Cards .card-btn {
+    cursor: pointer; /* Pointer cursor */
+    padding-block: 1em; /* Padding above and below */
+    width: 100%; /* Full width */
+    border-radius: 0.5em; /* Rounded corners */
+    background-image: linear-gradient(to right, var(--primary-linear-gradient)); /* Gradient background */
+    border: 2px solid transparent; /* Transparent border */
+    outline: transparent; /* Transparent outline */
+    transition: 0.125s ease; /* Smooth transition */
+    color: var(--neutral-white); /* Text color */
+  }
+  
+  /* Styles for card button when focused or hovered */
+  .Cards .card-btn:is(:focus-visible, :hover) {
+    color: hsl(22, 100%, 45%); /* Lighter text color */
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, var(--primary-linear-gradient)) border-box; /* Gradient background with border */
+    border-radius: 0.5em; /* Rounded corners */
+    border: 2px solid transparent; /* Transparent border */
+  }
+  
+  /* Special styles for second card button */
+  .Cards:nth-child(2) .card-btn {
+    background: transparent; /* Transparent background */
+    background-color: var(--neutral-white); /* White background */
+    color: hsl(22, 100%, 45%); /* Lighter text color */
+  }
+  
+  /* Styles for second card button when focused or hovered */
+  .Cards:nth-child(2) .card-btn:is(:focus-visible, :hover) {
+    color: var(--neutral-white); /* White text color */
+    background: linear-gradient(to right, var(--primary-linear-gradient)) padding-box, linear-gradient(white, white) border-box; /* Gradient background with border */
+    border-radius: 0.5em; /* Rounded corners */
+    border: 2px solid transparent; /* Transparent border */
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 800px) {
+    /* Adjust alignment for second card */
+    .Cards:nth-child(2) {
+      align-self: center; /* Center horizontally */
+    }
+  }
+  

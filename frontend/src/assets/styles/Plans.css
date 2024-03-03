@@ -1,0 +1,152 @@
+/* Global styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Use border-box box model */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+/* Root variables */
+:root {
+  --primary-fw: 700; /* Primary font weight */
+  --primary-fs: 15px; /* Primary font size */
+  --primary-linear-gradient: hsla(29, 100%, 55%, 0.993), hsl(22, 100%, 47%); /* Primary linear gradient */
+  --neutral-very-light-grayish-blue: hsl(240, 78%, 98%); /* Neutral very light grayish blue */
+  --neutral-light-grayish-blue: hsl(234, 14%, 74%); /* Neutral light grayish blue */
+  --neutral-grayish-blue: hsl(233, 13%, 49%); /* Neutral grayish blue */
+  --neutral-dark-grayish-blue: hsl(232, 13%, 33%); /* Neutral dark grayish blue */
+  --neutral-white: hsl(0, 0%, 100%); /* Neutral white */
+}
+
+/* Styles for the Plans component */
+.Plans {
+  position: relative; /* Relative positioning */
+  min-height: 100vh; /* Minimum height of the viewport */
+  min-height: 100dvh; /* Deprecated syntax for IE */
+  font-family: "Montserrat", sans-serif; /* Font family */
+  font-weight: var(--primary-fw); /* Font weight */
+  font-size: var(--primary-fs); /* Font size */
+  display: grid; /* Use CSS grid */
+  place-items: center; /* Center content */
+  background-color: var(--neutral-very-light-grayish-blue); /* Background color */
+  background-position: top right; /* Background position */
+  background-repeat: no-repeat; /* Prevent background from repeating */
+  background-size: 375px 658px; /* Background size */
+  z-index: 999; /* Set a high z-index */
+}
+
+/* Pseudo-element before Plans */
+.Plans::before {
+  content: ""; /* Empty content */
+  position: absolute; /* Absolute positioning */
+  bottom: 0; /* Align at the bottom */
+  left: 0; /* Align at the left */
+  max-width: 353px; /* Maximum width */
+  width: 100%; /* Full width */
+  height: 304px; /* Height */
+  background-repeat: no-repeat; /* Prevent background from repeating */
+  background-size: contain; /* Adjust background size */
+  z-index: -1; /* Set a lower z-index */
+}
+
+/* Button styles */
+button {
+  font-family: "Montserrat", sans-serif; /* Font family */
+  font-weight: var(--primary-fw); /* Font weight */
+  font-size: var(--primary-fs); /* Font size */
+}
+
+/* Styles for the toggle */
+.Plans .price-switch {
+  --border-radius: 10em; /* Border radius */
+  display: block; /* Block display */
+  width: 50px; /* Width */
+  height: 25px; /* Height */
+  border-radius: var(--border-radius); /* Border radius */
+  position: relative; /* Relative positioning */
+  cursor: pointer; /* Pointer cursor */
+}
+
+/* Styles for the checkbox */
+.Plans .price-checkbox {
+  opacity: 0; /* Set opacity to 0 */
+  height: 0; /* Set height to 0 */
+  width: 0; /* Set width to 0 */
+}
+
+/* Styles for the switch slider */
+.Plans .switch-slider {
+  position: absolute; /* Absolute positioning */
+  top: 0; /* Align at the top */
+  left: 0; /* Align at the left */
+  width: 50px; /* Width */
+  height: 25px; /* Height */
+  border-radius: var(--border-radius); /* Border radius */
+  background-image: linear-gradient(to right, var(--primary-linear-gradient)); /* Gradient background */
+}
+
+/* Hover and focus styles for switch slider */
+.Plans .switch-slider:is(:hover, :focus-visible) {
+  opacity: 0.7; /* Reduced opacity on hover/focus */
+}
+
+/* Styles for the pseudo-element before switch slider */
+.Plans .switch-slider::before {
+  content: ""; /* Empty content */
+  position: absolute; /* Absolute positioning */
+  top: 2px; /* Offset from the top */
+  left: 4px; /* Offset from the left */
+  width: 20px; /* Width */
+  border-radius: 50%; /* Border radius */
+  aspect-ratio: 1; /* Aspect ratio */
+  background-color: var(--neutral-very-light-grayish-blue); /* Background color */
+  transform: translateX(calc(100% + 2px)); /* Initial position */
+  transition: 0.3s ease; /* Smooth transition */
+}
+
+/* Checked state styles for switch slider */
+.Plans .price-checkbox:checked + .switch-slider::before {
+  transform: translateX(0%); /* Move to checked position */
+}
+
+/* Styles for the app container */
+.Plans .app-container {
+  width: min(90%, 70rem); /* Responsive width */
+}
+
+/* Styles for header */
+.Plans header .header-topic {
+  text-align: center; /* Center text */
+  color: var(--neutral-dark-grayish-blue); /* Text color */
+  font-size:xx-large; /* Large font size */
+}
+
+/* Styles for header row */
+.Plans header > .header-row {
+  margin-top: 2em; /* Margin top */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  gap: 2em; /* Spacing between items */
+}
+
+/* Styles for Plan */
+.Plans .Plan {
+  margin-top: 4em; /* Margin top */
+  min-height: 30rem; /* Minimum height */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 800px) {
+  .Plans {
+    padding-block: 10em; /* Adjust padding */
+  }
+  .Plans .Plan {
+    flex-direction: column; /* Stack items vertically */
+    gap: 2em; /* Spacing between items */
+  }
+}

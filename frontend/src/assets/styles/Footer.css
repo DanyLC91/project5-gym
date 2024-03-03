@@ -1,0 +1,53 @@
+/* Styles for the footer */
+.footer {
+    width: 100%; /* Full width */
+    min-height: 200px; /* Minimum height */
+    background-color: #383b3d; /* Dark background color */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Stack items vertically */
+    padding-top: 10px; /* Padding on top */
+  }
+  
+  /* Styles for the social media icons */
+  .SocialMedia {
+    display: flex; /* Use flexbox */
+    flex-direction: center; /* Center icons horizontally */
+  }
+  
+  /* Adjust margin between icons */
+  .SocialMedia svg {
+    margin: 5%; /* Add horizontal margin */
+    font-size: 70px; /* Larger font size */
+    cursor: pointer; /* Pointer cursor */
+  }
+  
+  /* Styles for the contact information */
+  .ContactUs {
+    margin-left: 10%; /* Left margin */
+    padding: 20px; /* Padding */
+    color: white; /* Text color */
+  }
+  
+  /* Styles for the social media links */
+  .SocialMedia a {
+    color: #fd9946; /* Bright orange color */
+    padding: 5%; /* Padding */
+  }
+  
+  /* Media query for larger screens */
+  @media screen and (min-width: 768px) {
+    .footer {
+      flex-direction: row; /* Arrange items horizontally */
+      justify-content: space-around; /* Space evenly */
+      padding-top: 0; /* Remove top padding */
+    }
+  
+    /* Adjust width for contact info and social media */
+    .ContactUs,
+    .SocialMedia {
+      width: 50%; /* Half width */
+    }
+  }
+  

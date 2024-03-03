@@ -1,0 +1,71 @@
+/* Styles for larger devices */
+body {
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+    background: linear-gradient(135deg, #ff9933, #f05d19, rgb(255, 134, 78), #e46600, #e48022, #a72e10);
+    /* Neon orange gradient background with additional colors */
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    /* Adjust spacing between blocks */
+    align-items: center;
+    flex-wrap: wrap;
+    /* Allow blocks to wrap to the next line on smaller screens */
+}
+
+
+.textBlock {
+    width: 45%;
+    /* Set width to 45% to allow some space between blocks */
+    margin-bottom: 20px;
+    /* Add some space between blocks */
+}
+
+.imageBlock {
+    max-width: 40%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    /* Ensure the image is clipped to the block's bounds */
+}
+
+
+.imageBlock img {
+    width: 100%;
+    /* Ensure the image fills the block */
+    height: auto;
+    /* Maintain aspect ratio */
+    -webkit-mask-image: linear-gradient(to left, transparent, black 10%, black 90%, transparent), linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    /* Apply mask to blur edges */
+    mask-image: linear-gradient(to left, transparent, black 10%, black 90%, transparent), linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    /* Apply mask to blur edges */
+}
+
+.text {
+    color: white;
+    font-size: x-large;
+    text-align: center;
+    padding: 10px;
+    /* Add padding to text for better spacing */
+}
+
+#first {
+    margin-top: 10%;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .imageBlock,
+    .textBlock {
+        width: auto;
+        /* Adjust width for smaller screens */
+    }
+
+    #first {
+        margin-top: 20%;
+    }
+}
